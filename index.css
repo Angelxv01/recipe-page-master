@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  gap: var(--space, 1em);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: 1em;
+}
