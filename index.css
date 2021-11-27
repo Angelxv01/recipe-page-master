@@ -5,11 +5,33 @@
   margin: 0;
 }
 
+body {
+  font-size: 12px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 66.67%;
+  margin: 1em auto;
+}
+
 .flex {
   display: flex;
-  gap: var(--space, 1em);
+  gap: var(--gap, 1em);
 }
 
 .flow > *:where(:not(:first-child)) {
-  margin-top: 1em;
+  margin-top: var(--gap, 1em);
+}
+
+.footer {
+  text-align: center;
+}
+
+.instructions > ol {
+  padding-left: 1em;
 }
