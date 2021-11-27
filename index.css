@@ -1,9 +1,32 @@
 :root {
+  /* font family */
   --ff-sans: "Montserrat", sans-serif;
   --ff-serif: "Playfair Display", serif;
+
+  /* font weight */
   --w400: 400;
   --w500: 500;
   --w700: 700;
+
+  /* line heigth */
+  --lh10: 10px;
+  --lh12: 12px;
+  --lh15: 15px;
+  --lh20: 20px;
+  --lh21: 21px;
+  --lh24: 24px;
+  --lh25: 25px;
+  --lh32: 32px;
+  --lh150: 150%;
+
+  /* color */
+  --clr-dark: 0 0% 0%;
+  --clr-gray1: 0 0% 20%;
+  --clr-gray2: 0 0% 31%;
+  --clr-gray3: 0 0% 51%;
+  --clr-gray4: 0 0% 74%;
+  --clr-gray5: 0 0% 77%;
+  --clr-primary: 28 87% 62%;
 }
 
 .ff-sans {
@@ -15,13 +38,58 @@
 }
 
 .w400 {
-  font-weight: 400;
+  font-weight: var(--w400);
 }
 .w500 {
-  font-weight: 500;
+  font-weight: var(--w500);
 }
 .w700 {
-  font-weight: 700;
+  font-weight: var(--w700);
+}
+.lh10 {
+  line-height: var(--lh10);
+}
+.lh12 {
+  line-height: var(--lh12);
+}
+.lh15 {
+  line-height: var(--lh15);
+}
+.lh20 {
+  line-height: var(--lh20);
+}
+.lh21 {
+  line-height: var(--lh21);
+}
+.lh24 {
+  line-height: var(--lh24);
+}
+.lh25 {
+  line-height: var(--lh25);
+}
+.lh32 {
+  line-height: var(--lh32);
+}
+.lh150 {
+  line-height: var(--lh150);
+}
+.p-dark {
+  color: hsl(var(--clr-dark));
+}
+.p-gray1 {
+  color: hsl(var(--clr-gray1));
+}
+.p-gray2 {
+  color: hsl(var(--clr-gray2));
+}
+.p-gray3 {
+  color: hsl(var(--clr-gray3));
+}
+.p-gray4 {
+  color: hsl(var(--clr-gray4));
+}
+.p-primary {
+  color: hsl(var(--clr-primary));
 }
 
 *,
@@ -35,6 +103,8 @@ body {
   font-size: 12px;
   font-family: var(--ff-sans);
   font-weight: var(--w400);
+  color: var(--clr-gray1);
+  background-color: hsl(0, 0%, 98%);
 }
 
 img {
@@ -42,12 +112,20 @@ img {
   max-width: 100%;
 }
 
+h2 {
+  line-height: var(--lh24);
+}
+
+h3 {
+  line-height: var(--lh21);
+}
+
 h5 {
   text-transform: uppercase;
 }
 
 .container {
-  width: 66.67%;
+  width: 80%;
   margin: 1em auto;
 }
 
@@ -66,4 +144,21 @@ h5 {
 
 .instructions > ol {
   padding-left: 1em;
+}
+
+.label {
+  line-height: var(--lh10);
+}
+
+.value {
+  line-height: var(--lh15);
+}
+
+.ingredient {
+  line-height: var(--lh25);
+}
+
+.instructions li {
+  line-height: var(--lh20);
+  color: hsl(var(--clr-dark));
 }
