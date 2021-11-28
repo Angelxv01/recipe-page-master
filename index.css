@@ -301,9 +301,13 @@ input[type="checkbox"] {
     --lh150: 150%;
   }
 
+  .container {
+    width: 66.67%;
+  }
+
   main {
     flex: 5;
-    max-width: 80%;
+    margin-right: 4em;
   }
 
   header > .flex {
