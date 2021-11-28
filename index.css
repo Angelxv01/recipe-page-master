@@ -293,7 +293,7 @@ input[type="checkbox"] {
     --lh10: 12px;
     --lh12: 12px;
     --lh15: 17px;
-    --lh20: 20px;
+    --lh20: 24px;
     --lh21: 24px;
     --lh24: 32px;
     --lh25: 25px;
@@ -303,7 +303,7 @@ input[type="checkbox"] {
 
   main {
     flex: 5;
-    padding-right: 2em;
+    max-width: 80%;
   }
 
   header > .flex {
@@ -318,9 +318,11 @@ input[type="checkbox"] {
   .split {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
   .info {
+    flex: 1 fit-content 0;
     margin-top: 1em;
     padding: 3em 2em;
     display: flex;
