@@ -279,3 +279,64 @@ input[type="checkbox"] {
   background-color: hsl(var(--clr-primary));
   border-radius: 0.25em;
 }
+
+@media only screen and (min-width: 992px) {
+  :root {
+    --fs700: 1.5rem;
+    --fs600: 1.5rem;
+    --fs500: 1.125rem;
+    --fs400: 1rem;
+    --fs300: 0.875rem;
+    --fs200: 0.875rem;
+    --fs100: 0.625rem;
+
+    --lh10: 12px;
+    --lh12: 12px;
+    --lh15: 17px;
+    --lh20: 20px;
+    --lh21: 24px;
+    --lh24: 32px;
+    --lh25: 25px;
+    --lh32: 32px;
+    --lh150: 150%;
+  }
+
+  main {
+    flex: 5;
+    padding-right: 2em;
+  }
+
+  header > .flex {
+    max-width: 57%;
+  }
+
+  .title {
+    font-size: 3rem;
+    line-height: 64px;
+  }
+
+  .split {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .info {
+    margin-top: 1em;
+    padding: 3em 2em;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+
+  .info-details {
+    flex-direction: column;
+  }
+
+  .info-details {
+    margin-top: 2.5em;
+    gap: 3em;
+  }
+}
