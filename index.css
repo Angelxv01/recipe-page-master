@@ -19,6 +19,15 @@
   --lh32: 32px;
   --lh150: 150%;
 
+  /* font size */
+  --fs700: 1.5rem;
+  --fs600: 1.125rem;
+  --fs500: 1rem;
+  --fs400: 0.875rem;
+  --fs300: 0.75rem;
+  --fs200: 0.625rem;
+  --fs100: 0.5rem;
+
   /* color */
   --clr-dark: 0 0% 0%;
   --clr-gray1: 0 0% 20%;
@@ -91,6 +100,27 @@
 .p-primary {
   color: hsl(var(--clr-primary));
 }
+.fs100 {
+  font-size: var(--fs100);
+}
+.fs200 {
+  font-size: var(--fs200);
+}
+.fs300 {
+  font-size: var(--fs300);
+}
+.fs400 {
+  font-size: var(--fs400);
+}
+.fs500 {
+  font-size: var(--fs500);
+}
+.fs600 {
+  font-size: var(--fs600);
+}
+.fs700 {
+  font-size: var(--fs700);
+}
 
 *,
 *::before,
@@ -100,7 +130,7 @@
 }
 
 body {
-  font-size: 12px;
+  font-size: 16px;
   font-family: var(--ff-sans);
   font-weight: var(--w400);
   color: var(--clr-gray1);
@@ -122,6 +152,11 @@ h3 {
 
 h5 {
   text-transform: uppercase;
+  font-size: var(--fs100);
+}
+
+#ingredients {
+  margin-top: 1em;
 }
 
 .container {
@@ -138,8 +173,18 @@ h5 {
   margin-top: var(--gap, 1em);
 }
 
+.description {
+  margin-top: 12px;
+}
+
+.hero-img {
+  margin: 24px 0;
+}
+
 .footer {
   text-align: center;
+  font-size: var(--fs400);
+  margin: 2em 0;
 }
 
 .instructions > ol {
@@ -152,13 +197,74 @@ h5 {
 
 .value {
   line-height: var(--lh15);
+  font-size: var(--fs200);
 }
 
 .ingredient {
   line-height: var(--lh25);
+  font-size: var(--fs400);
 }
 
 .instructions li {
   line-height: var(--lh20);
   color: hsl(var(--clr-dark));
+}
+
+.piece-name {
+  font-size: var(--fs500);
+  margin: 1em 0;
+}
+
+.piece > .flow .flex {
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.75);
+}
+
+.instructions {
+  margin-top: 1em;
+}
+
+.acknowledgement {
+  margin: 1em 0;
+}
+
+.acknowledgement > a:hover {
+  color: hsl(var(--clr-primary));
+}
+
+.instructions > ol {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  counter-reset: orderedlist;
+}
+
+.instructions > ol li {
+  display: grid;
+  grid-template-columns: 0 1fr;
+  gap: 3em;
+  align-items: start;
+}
+.instructions > ol li > p {
+  align-self: center;
+}
+
+.instructions > ol li:before {
+  display: grid;
+  place-content: center;
+  counter-increment: orderedlist;
+  width: 1.5em;
+  height: 1.5em;
+  content: counter(orderedlist);
+  font-family: var(--ff-serif);
+  font-size: var(--fs700);
+  color: #fff;
+  background-color: hsl(var(--clr-primary));
+  border-radius: 0.25em;
 }
