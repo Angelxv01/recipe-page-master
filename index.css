@@ -159,6 +159,13 @@ h5 {
   margin-top: 1em;
 }
 
+#ingredients .grid {
+  gap: 1em;
+  grid-template-columns: min-content minmax(1em, auto);
+  place-items: center;
+  justify-content: start;
+}
+
 .container {
   width: 80%;
   margin: 1em auto;
@@ -171,6 +178,10 @@ h5 {
 
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--gap, 1em);
+}
+
+.grid {
+  display: grid;
 }
 
 .description {
